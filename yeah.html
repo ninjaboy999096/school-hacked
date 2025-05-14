@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Popup Test - Same URL</title>
-</head>
-<body>
-  <button id="openPopups">Open Same URL Twice</button>
-
+  <title>epic</title>
   <script>
-    document.getElementById("openPopups").addEventListener("click", () => {
-      window.open("https://example.com", "_blank");
-      window.open("https://example.com", "_blank");
-    });
-  </script>
-</body>
-</html>
+    const alerts = [
+      "hey this was hacked by griffin",
+      "room 210",
+      "yeah uh epic yeah",
+    ];
 
-test
+    // Show alerts in sequence, then redirect
+    (async function runAlertsAndRedirect() {
+      for (const msg of alerts) {
+        alert(msg);
+      }
+      window.location.replace("https://www.youtube.com/watch?v=Twjf5efvmog");
+    })();
+  </script>
+</head>
+<body></body>
+</html>
